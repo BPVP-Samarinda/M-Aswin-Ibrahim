@@ -25,6 +25,8 @@ class ProdukResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('nama'),
                 Forms\Components\TextArea::make('deskripsi'),
+                Forms\Components\FileUpload::make('gambar')
+                ->imageCropAspectRatio('16:9'),
                 Forms\Components\Select::make('kategori_id')
                 ->relationship('kategori','nama'),
                 Forms\Components\TextInput::make('harga'),
@@ -38,6 +40,7 @@ class ProdukResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('nama'),
                 Tables\Columns\TextColumn::make('kategori.nama'),
+                Tables\Columns\ImageColumn::make('gambar'),
                 Tables\Columns\TextColumn::make('harga'),
                 Tables\Columns\TextColumn::make('stok')
             ])
