@@ -25,7 +25,7 @@ class KategoriResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('nama')
                 ->columnSpan('full'),
-                Forms\Components\TextArea::make('deskripsi')
+                Forms\Components\Textarea::make('deskripsi')
                 ->columnSpan('full'),
 
             ]);
