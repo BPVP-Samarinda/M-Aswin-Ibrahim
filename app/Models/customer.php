@@ -11,9 +11,8 @@ class customer extends Model
 
     protected $fillable = [
         'nama',
-        'deskripsi',
-        'gambar',
-        'harga',
-        'stok'
+        'tanggal_lahir',
+        'status',
+        'jenis_kelamin',
     ];
 }
